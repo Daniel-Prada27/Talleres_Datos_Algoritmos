@@ -14,7 +14,11 @@ public class PrimerTallerEstructDatos {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+            Estudiante e = new Estudiante("Daniel", "Prada", (byte)18, "systems engineering", (byte)5);
+            e.saludar();
+            e.setEdad((byte)18);
+            System.out.println(e.getEdad());
+            System.out.println(e.getApellido());
     }
     
 }

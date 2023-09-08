@@ -8,13 +8,13 @@ package primertallerestructdatos;
  *
  * @author danie
  */
-public class Persona {
+public abstract class Persona {
     
     protected String nombre;
     protected String apellido;
     protected byte edad;
 
-    public Persona(String nombre, String apellido, byte edad) {
+    protected Persona(String nombre, String apellido, byte edad) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
@@ -44,8 +44,6 @@ public class Persona {
         this.edad = edad;
     }
     
-    
-    
-    
+    public abstract void saludar();
     
 }
