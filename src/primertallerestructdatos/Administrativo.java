@@ -8,6 +8,11 @@ package primertallerestructdatos;
  *
  * @author danie
  */
-public class Administrativo {
+public class Administrativo extends Empleado {
+
+    public Administrativo(String nombre, String apellido, byte edad, float salario) {
+        super(nombre, apellido, edad, salario);
+        this.unidad = "administrative";
+    }
     
 }
