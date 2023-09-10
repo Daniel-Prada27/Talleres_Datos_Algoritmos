@@ -25,8 +25,12 @@ public class PrimerTallerEstructDatos {
             
             prof.saludar();
             
-            int[] li = {1,2,4,5,3};
-            System.out.println(Arrays.toString(ordenarNumeros(li, "ascendente")));
+            int[] list = {1,4,2,5,3};
+            System.out.println(Arrays.toString(ordenarNumeros(list, "ascendente")));
+            
+            // Lo desordenamos de nuevo;
+            int[] secondList = {1,2,4,5,3};
+            System.out.println(Arrays.toString(ordenarNumeros(secondList, "descendente")));
             
     }
     
@@ -34,20 +38,34 @@ public class PrimerTallerEstructDatos {
         
 //        Aprendí insertion sort leyendo Introduction to Algorithms Fourth Edition de Thomas H. Cormen, Charles E. Leiserson,
 //        Ronald L. Rivest, Clifford Stein
-        if (tipoOrden.equals("ascendente")) {
-            
-            for (int i = 1; i < vector.length; i++) {
-                int picked = vector[i];
-                int prev = i-1;
-                
-                while ( (prev >= 0) && (picked < vector[prev]) ) {
+        switch (tipoOrden) {
+            case "ascendente" -> {
+                for (int i = 1; i < vector.length; i++) {
+                    int picked = vector[i];
+                    int prev = i-1;
+                    
+                    while ( (prev >= 0) && (picked < vector[prev]) ) {
                         vector[prev+1] = vector[prev];
                         prev--;
+                    }
+                    
+                    vector[prev+1] = picked;
                 }
-                
-                vector[prev+1] = picked;
             }
-            
+            case "descendente" -> {
+                for (int i = 1; i < vector.length; i++) {
+                    int picked = vector[i];
+                    int prev = i-1;
+                    // El cambio está en picked > vector[prev]
+                    while ( (prev >= 0) && (picked > vector[prev]) ) {
+                        vector[prev+1] = vector[prev];
+                        prev--;
+                    }
+                    
+                    vector[prev+1] = picked;
+                }
+            }
+            default -> System.out.println("Especifiacion de ordenamiento no valida, el vector no sera alterado");
         }
         
         return vector;
