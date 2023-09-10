@@ -37,7 +37,8 @@ public class PrimerTallerEstructDatos {
 
         String[] segundoStrings = {"aa", "b", "abcc", "ccc"};
         System.out.println(Arrays.toString(ordenarStrings(segundoStrings, "descendente")));
-
+        
+        System.out.println(Recursion.encontrarSuma(4));
     }
 
     public static int[] ordenarNumeros(int[] vector, String tipoOrden) {
