@@ -10,21 +10,21 @@ package primertallerestructdatos;
  */
 public abstract class Empleado extends Persona{
 
-    protected float salario;
+    protected float salarioAnual;
     protected String unidad;
     protected byte añosTrabajando;
 
-    public Empleado(String nombre, String apellido, byte edad, float salario) {
+    public Empleado(String nombre, String apellido, byte edad, float salarioAnual) {
         super(nombre, apellido, edad);
-        this.salario = salario;
+        this.salarioAnual = salarioAnual;
     }
 
     public float getSalario() {
-        return salario;
+        return salarioAnual;
     }
 
-    public void setSalario(float salario) {
-        this.salario = salario;
+    public void setSalario(float salarioAnual) {
+        this.salarioAnual = salarioAnual;
     }
 
     public String getUnidad() {
@@ -46,7 +46,7 @@ public abstract class Empleado extends Persona{
     @Override
     public void saludar() {
         System.out.println("Hi, my name's " + nombre + " " + apellido + ", I'm " + edad + " years old and I'm working on the "
-                + unidad + " unit ");
+                + unidad + " unit making " + salarioAnual + " a year. I have been working for " + añosTrabajando + " years in here.");
     }
     
 }

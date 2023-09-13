@@ -10,8 +10,8 @@ package primertallerestructdatos;
  */
 public class Profesor extends Empleado {
 
-    public Profesor(String nombre, String apellido, byte edad, float salario) {
-        super(nombre, apellido, edad, salario);
+    public Profesor(String nombre, String apellido, byte edad, float salarioAnual) {
+        super(nombre, apellido, edad, salarioAnual);
         this.unidad = "academic";
     }
 
