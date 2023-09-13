@@ -17,6 +17,7 @@ public abstract class Empleado extends Persona{
     public Empleado(String nombre, String apellido, byte edad, float salarioAnual) {
         super(nombre, apellido, edad);
         this.salarioAnual = salarioAnual;
+        this.añosTrabajando = 0;
     }
 
     public float getSalario() {
@@ -45,8 +46,9 @@ public abstract class Empleado extends Persona{
     
     @Override
     public void saludar() {
+        String piece = (añosTrabajando == 1 ? "a year " : añosTrabajando + " years ");
         System.out.println("Hi, my name's " + nombre + " " + apellido + ", I'm " + edad + " years old and I'm working on the "
-                + unidad + " unit making " + salarioAnual + " a year. I have been working for " + añosTrabajando + " years in here.");
+                + unidad + " unit making " + salarioAnual + " a year. I have been working for " + piece + "in here.");
     }
     
 }
