@@ -48,7 +48,7 @@ public class Estudiante extends Persona {
     @Override
     public void saludar() {
         super.saludar();
-        System.out.println("studying an under" + "graduate in " + programa + " with an average of " + promedio);
+        System.out.println("studying an undergraduate in " + programa + " with an average of " + promedio);
     }
 
 }
