@@ -45,7 +45,7 @@ public abstract class Persona {
     }
 
     public void saludar() {
-        System.out.print("Hi, my name's " + nombre + " " + apellido + ", I'm " + edad + " years old and I'm ");
+        System.out.print("Hi, my name's " + nombre + " " + apellido + ", I'm " + edad + " years old");
     }
 
 }

@@ -48,7 +48,7 @@ public abstract class Empleado extends Persona {
     public void saludar() {
         super.saludar();
         String piece = (añosTrabajando == 1 ? "a year " : añosTrabajando + " years ");
-        System.out.println("working on the "
+        System.out.println(" and I'm working on the "
                 + unidad + " unit making " + salarioAnual + " a year. I have been working for " + piece + "in here.");
     }
 

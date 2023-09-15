@@ -60,7 +60,7 @@ public class Estudiante extends Persona {
     @Override
     public void saludar() {
         super.saludar();
-        System.out.println("studying " + educationLevel + " " + programa + ", currently taking " + numCursos +
+        System.out.println(" and I'm studying " + educationLevel + " " + programa + ", currently taking " + numCursos +
                 " courses on the " + semester + " semester, with an average of " + promedio);
     }
 
