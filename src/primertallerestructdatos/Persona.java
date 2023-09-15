@@ -14,7 +14,7 @@ public class Persona {
     protected String apellido;
     protected byte edad;
 
-    protected Persona(String nombre, String apellido, byte edad) {
+    public Persona(String nombre, String apellido, byte edad) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
