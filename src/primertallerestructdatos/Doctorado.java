@@ -8,7 +8,7 @@ package primertallerestructdatos;
  *
  * @author danie
  */
-public class Doctorado extends Estudiante {
+public class Doctorado extends Posgrado {
 
     public Doctorado(String nombre, String apellido, byte edad, String programa, byte numCursos) {
         super(nombre, apellido, edad, programa, numCursos);

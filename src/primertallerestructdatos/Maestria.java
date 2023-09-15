@@ -8,7 +8,7 @@ package primertallerestructdatos;
  *
  * @author danie
  */
-public class Maestria extends Estudiante {
+public class Maestria extends Posgrado {
 
     public Maestria(String nombre, String apellido, byte edad, String programa, byte numCursos) {
         super(nombre, apellido, edad, programa, numCursos);
