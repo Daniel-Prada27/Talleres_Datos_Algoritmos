@@ -8,7 +8,7 @@ package primertallerestructdatos;
  *
  * @author danie
  */
-public abstract class Empleado extends Persona{
+public abstract class Empleado extends Persona {
 
     protected float salarioAnual;
     protected String unidad;
@@ -43,12 +43,13 @@ public abstract class Empleado extends Persona{
     public void setAñosTrabajando(byte añosTrabajando) {
         this.añosTrabajando = añosTrabajando;
     }
-    
+
     @Override
     public void saludar() {
+        super.saludar();
         String piece = (añosTrabajando == 1 ? "a year " : añosTrabajando + " years ");
-        System.out.println("Hi, my name's " + nombre + " " + apellido + ", I'm " + edad + " years old and I'm working on the "
+        System.out.println("working on the "
                 + unidad + " unit making " + salarioAnual + " a year. I have been working for " + piece + "in here.");
     }
-    
+
 }
