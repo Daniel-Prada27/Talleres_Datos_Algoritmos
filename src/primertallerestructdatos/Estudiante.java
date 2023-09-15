@@ -9,15 +9,16 @@ package primertallerestructdatos;
  * @author danie
  */
 public class Estudiante extends Persona {
-    
+
     protected byte numCursos;
     protected float promedio;
     protected String programa;
-    
+
     public Estudiante(String nombre, String apellido, byte edad, String programa, byte numCursos) {
         super(nombre, apellido, edad);
         this.programa = programa;
         this.numCursos = numCursos;
+        this.promedio = 0;
     }
 
     public byte getNumCursos() {
@@ -46,8 +47,8 @@ public class Estudiante extends Persona {
 
     @Override
     public void saludar() {
-        System.out.println("Hi, my name's " + nombre + " " + apellido + ", I'm " + edad + " years old and I'm studying an under"
-                + "graduate in " + programa);
+        super.saludar();
+        System.out.println("studying an under" + "graduate in " + programa + " with an average of " + promedio);
     }
-    
+
 }

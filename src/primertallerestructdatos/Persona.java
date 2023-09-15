@@ -9,7 +9,7 @@ package primertallerestructdatos;
  * @author danie
  */
 public abstract class Persona {
-    
+
     protected String nombre;
     protected String apellido;
     protected byte edad;
@@ -43,7 +43,9 @@ public abstract class Persona {
     public void setEdad(byte edad) {
         this.edad = edad;
     }
-    
-    public abstract void saludar();
-    
+
+    public void saludar() {
+        System.out.print("Hi, my name's " + nombre + " " + apellido + ", I'm " + edad + " years old and I'm ");
+    }
+
 }
