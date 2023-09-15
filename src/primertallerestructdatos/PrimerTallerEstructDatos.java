@@ -27,11 +27,11 @@ public class PrimerTallerEstructDatos {
         //  Instancia de Pregrado y Posgrado
         Pregrado pregraduate = new Pregrado("Daniel", "Prada", (byte) 18, "systems engineering", (byte) 5);
         Posgrado postgraduate = new Posgrado("Guillermo", "Jaimes", (byte) 27, "computer science", (byte) 3);
-        
+
         //Instancia de Profesor y Administrativo
         Profesor teacher = new Profesor("Hoover", "Rueda", (byte) 30, 6000000);
         Administrativo admin = new Administrativo("Carolina", "Cherry", (byte) 40, 8000000);
-        
+
         //Instancia de Maestria y Posgrado
         Maestria master = new Maestria("Victor", "Bach", (byte) 37, "data analytics", (byte) 3);
         Doctorado doctor = new Doctorado("Raymond", "Holt", (byte) 57, "cybersecurity", (byte) 3);
@@ -89,6 +89,12 @@ public class PrimerTallerEstructDatos {
 
         // Suma recursiva
         System.out.println("\nSuma(4) = " + Recursion.encontrarSuma(4));
+        
+        
+        // Punto 1.3
+        int[] aaa = {100, 100, 78, 71, 89, 7, 42, 99, 3, 20, 74, 48, 67, 95, 14, 5, 60, 86, 29, 1, 91, 39, 50, 25, 8, 70, 61, 16, 84, 73, 2, 69, 88, 10, 45, 26, 64, 30, 76, 93, 55, 12, 80, 37, 58, 27, 68, 96, 21, 9, 47, 83, 72, 6, 40, 85, 19, 71, 54, 13, 81, 34, 53, 23, 82, 66, 15, 44, 97, 4, 62, 35, 87, 51, 33, 63, 31, 79, 28, 59, 22, 90, 38, 75, 17, 77, 98, 43, 65, 41, 94, 49, 24, 0, 52};
+        System.out.println("\nFrecuencia de notas por encima de 70, siendo el primer elemento la cantidad de 71's");
+        freq(aaa);
     }
 
     public static int[] ordenarNumeros(int[] vector, String tipoOrden) {
@@ -172,4 +178,20 @@ public class PrimerTallerEstructDatos {
 
     }
 
+    public static void freq(int[] arr) {
+
+        Integer[] result = new Integer[30];
+        for (int i = 0; i < result.length; i++) {
+            result[i] = 0;
+        }
+
+        for (int i = 0; i < arr.length; i++) {
+            if ((arr[i] > 70) && (arr[i] < 101)) {
+                result[arr[i] - 71] = result[arr[i] - 71] + 1;
+            }
+        }
+
+        System.out.println(Arrays.toString(result));
+
+    }
 }
