@@ -17,18 +17,58 @@ public class PrimerTallerEstructDatos {
      */
     public static void main(String[] args) {
 
-        //  Instancias de Estudiantes y Empleados
-        Pregrado est = new Pregrado("Daniel", "Prada", (byte) 18, "systems engineering", (byte) 5);
-        Profesor prof = new Profesor("Hoover", "Rueda", (byte) 30, 6000000);
+        // Instancia de Persona
+        Persona person = new Persona("Alex", "Perez", (byte) 13);
+
+        // Instancia de Estudiante y Empleado
+        Estudiante estudent = new Estudiante("Jorge", "Peralta", (byte) 19, "medicine", (byte) 6);
+        Empleado employee = new Empleado("Harvey", "Specter", (byte) 39, 400000);
+
+        //  Instancia de Pregrado y Posgrado
+        Pregrado pregraduate = new Pregrado("Daniel", "Prada", (byte) 18, "systems engineering", (byte) 5);
+        Posgrado postgraduate = new Posgrado("Guillermo", "Jaimes", (byte) 27, "computer science", (byte) 3);
+        
+        //Instancia de Profesor y Administrativo
+        Profesor teacher = new Profesor("Hoover", "Rueda", (byte) 30, 6000000);
+        Administrativo admin = new Administrativo("Carolina", "Cherry", (byte) 40, 8000000);
+        
+        //Instancia de Maestria y Posgrado
+        Maestria master = new Maestria("Victor", "Bach", (byte) 37, "data analytics", (byte) 3);
+        Doctorado doctor = new Doctorado("Raymond", "Holt", (byte) 57, "cybersecurity", (byte) 3);
 
         // Establecer atributos
-        est.setEdad((byte) 18);
-        est.setPromedio((float) 4.7);
-        prof.setAñosTrabajando((byte) 1); // Por defecto, los años que lleva trabajando son cero (0)
+        estudent.setPromedio((float) 3.9);
+        pregraduate.setEdad((byte) 18);
+        pregraduate.setPromedio((float) 4.5);
+        postgraduate.setPromedio((float) 4.3);
+        postgraduate.setSemester((byte) 5);
+        master.setPromedio((float) 4.7);
+        master.setSemester((byte) 7);
+        doctor.setSemester((byte) 2);
+        doctor.setPromedio((float) 4.1);
+        employee.setAñosTrabajando((byte) 3);
+        admin.setAñosTrabajando((byte) 7);
+        teacher.setAñosTrabajando((byte) 1); // Por defecto, los años que lleva trabajando son cero (0)
 
         // Saludos
-        est.saludar();
-        prof.saludar();
+        System.out.print("Persona:  ");
+        person.saludar();
+        System.out.print("\n\nEstudiante:  ");
+        estudent.saludar();
+        System.out.print("\nPregrado:  ");
+        pregraduate.saludar();
+        System.out.print("\nPosgrado:  ");
+        postgraduate.saludar();
+        System.out.print("\nMaestria:  ");
+        master.saludar();
+        System.out.print("\nDoctorado:  ");
+        doctor.saludar();
+        System.out.print("\nEmpleado:  ");
+        employee.saludar();
+        System.out.print("\nProfesor:  ");
+        teacher.saludar();
+        System.out.print("\nAdministrativo:  ");
+        admin.saludar();
 
         // Sección de ordenamiento
         System.out.println("\nListas ordenadas:");
