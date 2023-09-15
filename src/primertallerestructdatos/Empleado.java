@@ -8,7 +8,7 @@ package primertallerestructdatos;
  *
  * @author danie
  */
-public abstract class Empleado extends Persona {
+public class Empleado extends Persona {
 
     private float salarioAnual;
     protected String unidad;
