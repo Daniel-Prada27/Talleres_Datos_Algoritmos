@@ -16,20 +16,20 @@ public class PrimerTallerEstructDatos {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
+
         //  Instancias de Estudiantes y Empleados
         Estudiante est = new Estudiante("Daniel", "Prada", (byte) 18, "systems engineering", (byte) 5);
         Profesor prof = new Profesor("Hoover", "Rueda", (byte) 30, 6000000);
-        
+
         // Establecer atributos
         est.setEdad((byte) 18);
-        prof.setAñosTrabajando((byte)1); // Por defecto, los años que lleva trabajando son cero (0)
-        
-        
+        est.setPromedio((float) 4.7);
+        prof.setAñosTrabajando((byte) 1); // Por defecto, los años que lleva trabajando son cero (0)
+
         // Saludos
         est.saludar();
         prof.saludar();
-        
+
         // Sección de ordenamiento
         System.out.println("\nListas ordenadas:");
         int[] list = {1, 4, 2, 5, 3};
@@ -42,13 +42,11 @@ public class PrimerTallerEstructDatos {
         String[] strings = {"aa", "b", "abcc", "ccc"};
         System.out.println(Arrays.toString(ordenarStrings(strings, "ascendente")));
 
-        
         // Sección de ordenamiento de strings
         System.out.println("\nStrings ordenados");
         String[] segundoStrings = {"aa", "b", "abcc", "ccc"};
         System.out.println(Arrays.toString(ordenarStrings(segundoStrings, "descendente")));
-        
-        
+
         System.out.println(Recursion.encontrarSuma(4));
     }
 
@@ -90,7 +88,6 @@ public class PrimerTallerEstructDatos {
         return vector;
     }
 
-    
     //Misma lógica que ordenarNumeros, pero con distinto tipo de dato
     public static String[] ordenarStrings(String[] vector, String tipoOrden) {
 
