@@ -10,9 +10,9 @@ package primertallerestructdatos;
  */
 public abstract class Empleado extends Persona {
 
-    protected float salarioAnual;
+    private float salarioAnual;
     protected String unidad;
-    protected byte añosTrabajando;
+    private byte añosTrabajando;
 
     public Empleado(String nombre, String apellido, byte edad, float salarioAnual) {
         super(nombre, apellido, edad);

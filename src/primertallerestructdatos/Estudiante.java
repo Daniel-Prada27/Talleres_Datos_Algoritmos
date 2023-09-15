@@ -10,11 +10,11 @@ package primertallerestructdatos;
  */
 public class Estudiante extends Persona {
 
-    protected byte numCursos;
-    protected float promedio;
-    protected String programa;
+    private byte numCursos;
+    private float promedio;
+    private String programa;
     protected String educationLevel;
-    protected byte semester;
+    private byte semester;
 
     public Estudiante(String nombre, String apellido, byte edad, String programa, byte numCursos) {
         super(nombre, apellido, edad);
