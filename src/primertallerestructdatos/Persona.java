@@ -8,7 +8,7 @@ package primertallerestructdatos;
  *
  * @author danie
  */
-public abstract class Persona {
+public class Persona {
 
     protected String nombre;
     protected String apellido;
