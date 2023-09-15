@@ -95,6 +95,10 @@ public class PrimerTallerEstructDatos {
         int[] aaa = {100, 100, 78, 71, 89, 7, 42, 99, 3, 20, 74, 48, 67, 95, 14, 5, 60, 86, 29, 1, 91, 39, 50, 25, 8, 70, 61, 16, 84, 73, 2, 69, 88, 10, 45, 26, 64, 30, 76, 93, 55, 12, 80, 37, 58, 27, 68, 96, 21, 9, 47, 83, 72, 6, 40, 85, 19, 71, 54, 13, 81, 34, 53, 23, 82, 66, 15, 44, 97, 4, 62, 35, 87, 51, 33, 63, 31, 79, 28, 59, 22, 90, 38, 75, 17, 77, 98, 43, 65, 41, 94, 49, 24, 0, 52};
         System.out.println("\nFrecuencia de notas por encima de 70, siendo el primer elemento la cantidad de 71's");
         freq(aaa);
+        
+        // Ejecucion de fibonacci optimizado
+        System.out.println("");
+        System.out.println("\nResultado: " + Recursion.fib(6));
     }
 
     public static int[] ordenarNumeros(int[] vector, String tipoOrden) {
@@ -178,16 +182,16 @@ public class PrimerTallerEstructDatos {
 
     }
 
-    public static void freq(int[] arr) {
+    public static void freq(int[] notas) {
 
         Integer[] result = new Integer[30];
         for (int i = 0; i < result.length; i++) {
             result[i] = 0;
         }
 
-        for (int i = 0; i < arr.length; i++) {
-            if ((arr[i] > 70) && (arr[i] < 101)) {
-                result[arr[i] - 71] = result[arr[i] - 71] + 1;
+        for (int i = 0; i < notas.length; i++) {
+            if ((notas[i] > 70) && (notas[i] < 101)) {
+                result[notas[i] - 71] += 1;
             }
         }
 
