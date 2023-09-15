@@ -15,6 +15,4 @@ public class Profesor extends Empleado {
         this.unidad = "academic";
     }
 
-
-    
 }

@@ -9,9 +9,9 @@ package primertallerestructdatos;
  * @author danie
  */
 public class Recursion {
-    
+
     public static int encontrarSuma(int n) {
-        return (n ==1) ? 1 : n + encontrarSuma(n-1);
+        return (n == 1) ? 1 : n + encontrarSuma(n - 1);
     }
-    
+
 }

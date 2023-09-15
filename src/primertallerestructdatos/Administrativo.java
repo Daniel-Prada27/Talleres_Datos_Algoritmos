@@ -14,5 +14,5 @@ public class Administrativo extends Empleado {
         super(nombre, apellido, edad, salarioAnual);
         this.unidad = "administrative";
     }
-    
+
 }
