@@ -13,12 +13,14 @@ public class Estudiante extends Persona {
     protected byte numCursos;
     protected float promedio;
     protected String programa;
+    protected String educationLevel;
 
     public Estudiante(String nombre, String apellido, byte edad, String programa, byte numCursos) {
         super(nombre, apellido, edad);
         this.programa = programa;
         this.numCursos = numCursos;
         this.promedio = 0;
+        this.educationLevel = "\b";
     }
 
     public byte getNumCursos() {
@@ -48,7 +50,7 @@ public class Estudiante extends Persona {
     @Override
     public void saludar() {
         super.saludar();
-        System.out.println("studying an undergraduate in " + programa + " with an average of " + promedio);
+        System.out.println("studying " + educationLevel + " " + programa + " with an average of " + promedio);
     }
 
 }

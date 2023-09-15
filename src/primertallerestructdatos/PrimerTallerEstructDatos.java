@@ -18,7 +18,7 @@ public class PrimerTallerEstructDatos {
     public static void main(String[] args) {
 
         //  Instancias de Estudiantes y Empleados
-        Estudiante est = new Estudiante("Daniel", "Prada", (byte) 18, "systems engineering", (byte) 5);
+        Pregrado est = new Pregrado("Daniel", "Prada", (byte) 18, "systems engineering", (byte) 5);
         Profesor prof = new Profesor("Hoover", "Rueda", (byte) 30, 6000000);
 
         // Establecer atributos
